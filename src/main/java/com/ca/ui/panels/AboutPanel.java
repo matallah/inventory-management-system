@@ -47,7 +47,7 @@ public class AboutPanel extends AbstractFunctionPanel {
                 ",\r\n" +
                 ResourceManager.getString(StrConstants.DEPARTMENT) +
                 "\r\n\r\n" +
-                "Developed by  : Ganesh Tiwari \r\nBlog  : http://ganeshtiwaridotcomdotnp.blogspot.com/\r\nSupport Email : gtiwari333@gmail.com");
+                "Developed by  : SBS");
         panel.add(txtrHello, "4, 4, 5, 3, fill, fill");
     }
 
