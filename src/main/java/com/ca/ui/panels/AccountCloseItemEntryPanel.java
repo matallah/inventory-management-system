@@ -31,7 +31,7 @@ import java.util.Date;
 import java.util.List;
 
 public class AccountCloseItemEntryPanel extends AbstractFunctionPanel {
-    String[] header = new String[]{"S.N.", "ID", "Purchase Order No.", "Name", "Pana Number", "Category", "Parts Number", "Serial Number",
+    String[] header = new String[]{"S.N.", "ID", "Purchase Order No.", "Name", "Purchase Number", "Category", "Parts Number", "Serial Number",
             "Rack Number", "Purchase date", "Added date", "Vendor", "Original Quantity", "Qty in Stock", "Rate", "Unit", "Total", "Saved Date"};
     JPanel formPanel = null;
     JPanel buttonPanel;
@@ -212,7 +212,7 @@ public class AccountCloseItemEntryPanel extends AbstractFunctionPanel {
             buttonPanel.add(cmbReturnableOrNonRet);
             buttonPanel.add(btnReadAll);
 
-            btnModify = new JButton("Change Pana Number");
+            btnModify = new JButton("Change Purchase Number");
             btnModify.addActionListener(e -> {
                 if (editingPrimaryId > 0) changeStatus(Status.MODIFY);
             });
@@ -453,14 +453,14 @@ public class AccountCloseItemEntryPanel extends AbstractFunctionPanel {
             formPanel.add(txtPurchaseordernumber, "8, 2, fill, default");
             txtPurchaseordernumber.setColumns(10);
 
-            lblKhataNumber = new JLabel("Khata Number");
+            lblKhataNumber = new JLabel("Transaction Number");
             formPanel.add(lblKhataNumber, "4, 4");
 
             txtKhatanumber = new JTextField();
             formPanel.add(txtKhatanumber, "8, 4, fill, default");
             txtKhatanumber.setColumns(10);
 
-            lblDakhilaNumber = new JLabel("Dakhila Number");
+            lblDakhilaNumber = new JLabel("Entry Number");
             formPanel.add(lblDakhilaNumber, "4, 6");
 
             txtDakhilanumber = new JTextField();
@@ -476,7 +476,7 @@ public class AccountCloseItemEntryPanel extends AbstractFunctionPanel {
             formPanel.add(txtName, "8, 8, fill, default");
             txtName.setColumns(10);
 
-            lblPanaNumber = new JLabel("Pana Number");
+            lblPanaNumber = new JLabel("Purchase Number");
             formPanel.add(lblPanaNumber, "4, 10");
 
             txtPananumber = new JTextField();
@@ -639,7 +639,7 @@ public class AccountCloseItemEntryPanel extends AbstractFunctionPanel {
 
     @Override
     public final String getFunctionName() {
-        return "Account Closing - Ledger Pana Number Update";
+        return "Account Closing - Ledger Purchase Number Update";
     }
 
     private JPanel getUpperSplitPane() {

@@ -5,7 +5,7 @@ public class ReportBean {
     private int itemId;
     private String date;
     private String goodsName;
-    private String entryFormId; // dakhila number
+    private String entryFormId; // Entry Number
     private String khataPanaNumber;
     private String supplier;
     private String specification;

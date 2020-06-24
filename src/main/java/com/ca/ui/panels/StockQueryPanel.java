@@ -28,7 +28,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class StockQueryPanel extends AbstractFunctionPanel {
-    String[] header = new String[]{"S.N.", "ID", "Name", "Category", "Specification", "Khata No.", "Dakhila No.", "Parts Number", "Serial Number", "Pana Number", "Rack Number", "Purchase date", "Vendor", "Added Type",
+    String[] header = new String[]{"S.N.", "ID", "Name", "Category", "Specification", "Account No.", "Dakhila No.", "Parts Number", "Serial Number", "Purchase Number", "Rack Number", "Purchase date", "Vendor", "Added Type",
             "Remaining Quantity", "Unit", "Rate",};
     JPanel formPanel = null;
     JPanel buttonPanel;
@@ -281,21 +281,21 @@ public class StockQueryPanel extends AbstractFunctionPanel {
             formPanel.add(specPanelHolder, "4, 6, 21, 1, fill, fill");
             specPanelHolder.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
 
-            lblKhataNumber = new JLabel("Khata Number");
+            lblKhataNumber = new JLabel("Transaction Number");
             formPanel.add(lblKhataNumber, "4, 8");
 
             txtKhataNumber = new JTextField();
             formPanel.add(txtKhataNumber, "8, 8, fill, default");
             txtKhataNumber.setColumns(10);
 
-            lblDakhilaNumber = new JLabel("Dakhila Number");
+            lblDakhilaNumber = new JLabel("Entry Number");
             formPanel.add(lblDakhilaNumber, "12, 8");
 
             txtDakhilanumber = new JTextField();
             formPanel.add(txtDakhilanumber, "16, 8, fill, default");
             txtDakhilanumber.setColumns(10);
 
-            lblPanaNumber = new JLabel("Pana Number");
+            lblPanaNumber = new JLabel("Purchase Number");
             formPanel.add(lblPanaNumber, "4, 10");
 
             txtPanaNumber = new JTextField();
@@ -385,7 +385,7 @@ public class StockQueryPanel extends AbstractFunctionPanel {
             } else {
                 addedType = "Returned Stock";
             }
-            //"Specification","Khata No.","Dakhila No.",
+            //"Specification","Account No.","Dakhila No.",
             dataModel.addRow(new Object[]{++sn, bo.getId(), bo.getName(), bo.getCategory().getCategoryName(), bo.getSpeciifcationString(), bo.getKhataNumber(), bo.getDakhilaNumber(), bo.getPartsNumber(),
                     bo.getSerialNumber(), bo.getPanaNumber(), bo.getRackNo(), DateTimeUtils.getCvDateMMMddyyyy(bo.getPurchaseDate()), bo.getVendor().getName(), addedType, bo.getQuantity(), bo.getUnitsString().getValue(),
                     bo.getRate()});

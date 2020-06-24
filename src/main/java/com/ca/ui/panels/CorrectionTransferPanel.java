@@ -111,13 +111,13 @@ public class CorrectionTransferPanel extends AbstractFunctionPanel {
         txtCategoryr = new JLabel("-");
         add(txtCategoryr, "8, 4");
 
-        JLabel lblKhatapanaNumber = new JLabel("Khata/Pana Number");
+        JLabel lblKhatapanaNumber = new JLabel("Account/Purchase Number");
         add(lblKhatapanaNumber, "4, 6");
 
         txtKhatapananumbbber = new JLabel("KhataPanaNumbbber");
         add(txtKhatapananumbbber, "8, 6");
 
-        JLabel lblTransferNumber = new JLabel("Transfer Pana Number");
+        JLabel lblTransferNumber = new JLabel("Transfer Purchase Number");
         add(lblTransferNumber, "4, 8");
 
         txtTransferpananum = new JTextField();

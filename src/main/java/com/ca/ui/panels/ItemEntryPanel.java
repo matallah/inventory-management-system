@@ -35,7 +35,7 @@ import java.util.Date;
 import java.util.List;
 
 public class ItemEntryPanel extends AbstractFunctionPanel {
-    String[] header = new String[]{"S.N.", "ID", "Purchase Order No.", "Khata No.", "Dakhila No.", "Name", "Pana No.", "Category", "Specification",
+    String[] header = new String[]{"S.N.", "ID", "Purchase Order No.", "Account No.", "Dakhila No.", "Name", "Pana No.", "Category", "Specification",
             "Parts No.", "Serial No.", "Rack Number", "Purchase date", "Added date", "Vendor", "Original Quantity", "Qty in Stock", "Rate", "Unit",
             "Total"};
     JPanel formPanel = null;
@@ -490,14 +490,14 @@ public class ItemEntryPanel extends AbstractFunctionPanel {
             formPanel.add(txtPurchaseordernumber, "8, 2, fill, default");
             txtPurchaseordernumber.setColumns(10);
 
-            lblKhataNumber = new JLabel("Khata");
+            lblKhataNumber = new JLabel("Account");
             formPanel.add(lblKhataNumber, "4, 4");
 
             txtKhatanumber = new JTextField();
             formPanel.add(txtKhatanumber, "8, 4, fill, default");
             txtKhatanumber.setColumns(10);
 
-            lblDakhilaNumber = new JLabel("Dakhila Number");
+            lblDakhilaNumber = new JLabel("Entry Number");
             formPanel.add(lblDakhilaNumber, "4, 6");
 
             txtDakhilanumber = new JTextField();
@@ -511,7 +511,7 @@ public class ItemEntryPanel extends AbstractFunctionPanel {
             formPanel.add(txtName, "8, 8, fill, default");
             txtName.setColumns(10);
 
-            lblPanaNumber = new JLabel("Pana Number");
+            lblPanaNumber = new JLabel("Purchase Number");
             formPanel.add(lblPanaNumber, "4, 10");
 
             txtPananumber = new JTextField();

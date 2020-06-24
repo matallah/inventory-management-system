@@ -122,14 +122,14 @@ public class LedgerReportPanel extends AbstractFunctionPanel {
                     FormFactory.RELATED_GAP_COLSPEC, ColumnSpec.decode("default:grow"),}, new RowSpec[]{FormFactory.RELATED_GAP_ROWSPEC,
                     FormFactory.DEFAULT_ROWSPEC,}));
 
-            lblItemName = new JLabel("Khata Number");
+            lblItemName = new JLabel("Transaction Number");
             formPanel.add(lblItemName, "4, 2");
 
             txtKhataNumber = new JTextField();
             formPanel.add(txtKhataNumber, "8, 2, fill, default");
             txtKhataNumber.setColumns(10);
 
-            lblPanaNumber = new JLabel("Pana Number");
+            lblPanaNumber = new JLabel("Purchase Number");
             formPanel.add(lblPanaNumber, "12, 2");
 
             txtPanaNumber = new JTextField();
@@ -153,16 +153,16 @@ public class LedgerReportPanel extends AbstractFunctionPanel {
         String panaNum = txtPanaNumber.getText().trim();
 
         if (StringUtils.isEmpty(khataNum) && !StringUtils.isEmpty(panaNum)) {
-            JOptionPane.showMessageDialog(null, "If pana number is specified, khata number must be given ", "Error", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "If Purchase Number is specified, Transaction Number must be given ", "Error", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
         // either value entered at khatanumber only or both or blank is valid
-        // if khata number is entered, it is not single pana
-        // if khata number and pana number both entered, then single pana number
+        // if Transaction Number is entered, it is not single pana
+        // if Transaction Number and Purchase Number both entered, then single Purchase Number
 
         boolean isSinglePanaLedger = false;
         if (!StringUtils.isEmpty(panaNum)) {
-            // show pana number and item name at header
+            // show Purchase Number and item name at header
             isSinglePanaLedger = true;
         } else {
             // pana/khata num at separate column, remove item name .. from

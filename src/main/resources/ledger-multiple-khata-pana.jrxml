@@ -310,7 +310,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="6" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Khata/ Pana Number]]></text>
+				<text><![CDATA[Account/ Purchase Number]]></text>
 			</staticText>
 		</band>
 	</columnHeader>

@@ -33,7 +33,7 @@ import java.util.Map.Entry;
 
 public class ItemTransferPanel extends AbstractFunctionPanel {
     final int qtyCol = 6;
-    String[] header = new String[]{"", "ID", "Pana Number", "Name", "Category", "Specification", "Parts Number", "Serial Number", "Rack Number",
+    String[] header = new String[]{"", "ID", "Purchase Number", "Name", "Category", "Specification", "Parts Number", "Serial Number", "Rack Number",
             "Purchase date", "Added date", "Vendor", "Quantity", "Unit", "Rate"};
     String[] cartHeader = new String[]{"", "ID", "Name", "Category", "Specification", "Rack Number", "Quantity", "Unit"};
     /**
@@ -242,7 +242,7 @@ public class ItemTransferPanel extends AbstractFunctionPanel {
             });
             cartPanel.add(btnSend, "16, 4, default, bottom");
 
-            lblNiksasaPanaNumber = new JLabel("Niksasa Pana Number");
+            lblNiksasaPanaNumber = new JLabel("Niksasa Purchase Number");
             cartPanel.add(lblNiksasaPanaNumber, "4, 6, left, default");
 
             txtTransferpananumber = new JTextField();
@@ -431,7 +431,7 @@ public class ItemTransferPanel extends AbstractFunctionPanel {
             formPanel.add(txtItemname, "8, 2, fill, default");
             txtItemname.setColumns(10);
 
-            lblPanaNumber = new JLabel("Item Pana Number");
+            lblPanaNumber = new JLabel("Item Purchase Number");
             formPanel.add(lblPanaNumber, "12, 2");
 
             txtPanaNumber = new JTextField();
@@ -457,14 +457,14 @@ public class ItemTransferPanel extends AbstractFunctionPanel {
             btnSave = new JButton("Search");
             btnSave.addActionListener(e -> handleSearchQuery());
 
-            lblKhataNumber = new JLabel("Khata Number");
+            lblKhataNumber = new JLabel("Transaction Number");
             formPanel.add(lblKhataNumber, "4, 8");
 
             txtKhatanumber = new JTextField();
             formPanel.add(txtKhatanumber, "8, 8, fill, default");
             txtKhatanumber.setColumns(10);
 
-            lblDakhilaNumber = new JLabel("Dakhila Number");
+            lblDakhilaNumber = new JLabel("Entry Number");
             formPanel.add(lblDakhilaNumber, "12, 8");
 
             txtDakhilanumber = new JTextField();

@@ -97,12 +97,12 @@ public class AppFrame extends JFrame {
             /**
              * Entry Menu
              */
-            JMenu entryMenu = new JMenu("Entry");
-            entryMenu.add(ActionMenuItem.create("New Item Entry", "sitementry", "com.ca.ui.panels.ItemEntryPanel"));
-            entryMenu.add(ActionMenuItem.create("Item Nikasha", "sitemnikasha", "com.ca.ui.panels.ItemTransferPanel"));
-            entryMenu.add(ActionMenuItem.create("Item Return", "sitemnikasha", "com.ca.ui.panels.ItemReturnPanel"));
+            JMenu entryMenu = new JMenu(SETTINGS);
+            entryMenu.add(ActionMenuItem.create(NEW_ITEM, "sitementry", "com.ca.ui.panels.ItemEntryPanel"));
+            entryMenu.add(ActionMenuItem.create(PURCHASE_ORDER, "sitemnikasha", "com.ca.ui.panels.ItemTransferPanel"));
+            entryMenu.add(ActionMenuItem.create(PURCHASE_RETURN, "sitemnikasha", "com.ca.ui.panels.ItemReturnPanel"));
             entryMenu.add(new JSeparator());
-            JMenu initRecordMenuSub = new JMenu("Initial Records");
+            JMenu initRecordMenuSub = new JMenu(Initial_Settings);
 
             initRecordMenuSub.add(ActionMenuItem.create("Add Category", "a", "com.ca.ui.panels.CategoryPanel"));
             initRecordMenuSub.add(ActionMenuItem.create("Add Vendor", "vendor", "com.ca.ui.panels.VendorPanel"));
@@ -251,16 +251,16 @@ public class AppFrame extends JFrame {
             toolBarPanel.setLayout(new BorderLayout(20, 10));
 
             List<JLabel> buttons = new ArrayList<>();
-            buttons.add(ActionButton.create("الرئيسية", "home", "com.ca.ui.panels.HomeScreenPanel"));
-            buttons.add(ActionButton.create("المخازن", "find", "com.ca.ui.panels.StockQueryPanel"));
-            buttons.add(ActionButton.create("أمر شراء", "itementry", "com.ca.ui.panels.ItemEntryPanel"));
-            buttons.add(ActionButton.create("أمر توريد ", "itemtransfer", "com.ca.ui.panels.ItemTransferPanel"));
-            buttons.add(ActionButton.create("المرتجعات", "return", "com.ca.ui.panels.ItemReturnPanel"));
-            buttons.add(ActionButton.create("تقارير المرتجعات", "returnquerya", "com.ca.ui.panels.ReturnQueryPanel"));
-            buttons.add(ActionButton.create("التقارير", "stock", "com.ca.ui.report.LedgerReportPanel"));
+            buttons.add(ActionButton.create(HOME, "home", "com.ca.ui.panels.HomeScreenPanel"));
+            buttons.add(ActionButton.create(STOCKS, "find", "com.ca.ui.panels.StockQueryPanel"));
+            buttons.add(ActionButton.create(PURCHASE_ORDER, "itementry", "com.ca.ui.panels.ItemEntryPanel"));
+            buttons.add(ActionButton.create(SALES_ORDER, "itemtransfer", "com.ca.ui.panels.ItemTransferPanel"));
+            buttons.add(ActionButton.create(PURCHASE_RETURN, "return", "com.ca.ui.panels.ItemReturnPanel"));
+            buttons.add(ActionButton.create(RETURN_REPORTS, "returnquerya", "com.ca.ui.panels.ReturnQueryPanel"));
+            buttons.add(ActionButton.create(REPORTS, "stock", "com.ca.ui.report.LedgerReportPanel"));
             buttons.add(new JLabel());
-            buttons.add(LogOutButton.create("الخروج", "logout", "com.ca.ui.panels.HomeScreenPanel"));
-            buttons.add(ExitButton.create("إغلاق", "exit", "com.ca.ui.panels.HomeScreenPanel"));
+            buttons.add(LogOutButton.create(SIGN_OUT, "logout", "com.ca.ui.panels.HomeScreenPanel"));
+            buttons.add(ExitButton.create(CLOSE, "exit", "com.ca.ui.panels.HomeScreenPanel"));
 
             toolBarPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED));
             toolBarPanel.setPreferredSize(new Dimension(getWidth(), 80));
@@ -288,5 +288,23 @@ public class AppFrame extends JFrame {
         isLoggedIn = false;
 
     }
+
+    public static final String HOME = "Home";
+    public static final String STOCKS = "Stocks";
+    public static final String PURCHASE_ORDER = "Purchase order";
+    public static final String SALES_ORDER = "Sales order";
+    public static final String PURCHASE_RETURN = "Purchase Return";
+    public static final String RETURN_REPORTS = "Return reports";
+    public static final String REPORTS = "Reports";
+    public static final String SIGN_OUT = "Sign out";
+    public static final String CLOSE = "Close";
+    public static final String SETTINGS = "Settings";
+    public static final String NEW_ITEM = "New Item";
+    public static final String Initial_Settings = "Initial Settings";
+    public static final String Add_Category = "Add Category";
+    public static final String Add_Vendor = "Add Vendor";
+    public static final String Add_Person = "Add Person";
+    public static final String Add_Branch_Office = "Add Branch Office";
+    public static final String Add_New_Unit_Type = "Add New Unit Type";
 
 }
