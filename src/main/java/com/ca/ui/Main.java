@@ -57,8 +57,8 @@ public class Main {
         if (!LoginUserServiceImpl.userExists()) {
             LoginUser lu = new LoginUser();
             lu.setdFlag(1);
-            lu.setUsername("ADMIN");
-            lu.setPassword("ADMIN");
+            lu.setUsername("admin");
+            lu.setPassword("admin");
             lus.saveLoginUser(lu);
         }
     }

@@ -251,16 +251,16 @@ public class AppFrame extends JFrame {
             toolBarPanel.setLayout(new BorderLayout(20, 10));
 
             List<JLabel> buttons = new ArrayList<>();
-            buttons.add(ActionButton.create("HOME", "home", "com.ca.ui.panels.HomeScreenPanel"));
-            buttons.add(ActionButton.create("Stock Query", "find", "com.ca.ui.panels.StockQueryPanel"));
-            buttons.add(ActionButton.create("Item Entry", "itementry", "com.ca.ui.panels.ItemEntryPanel"));
-            buttons.add(ActionButton.create("Transfer", "itemtransfer", "com.ca.ui.panels.ItemTransferPanel"));
-            buttons.add(ActionButton.create("Item Return", "return", "com.ca.ui.panels.ItemReturnPanel"));
-            buttons.add(ActionButton.create("Return Query", "returnquerya", "com.ca.ui.panels.ReturnQueryPanel"));
-            buttons.add(ActionButton.create("Ledger View", "stock", "com.ca.ui.report.LedgerReportPanel"));
+            buttons.add(ActionButton.create("الرئيسية", "home", "com.ca.ui.panels.HomeScreenPanel"));
+            buttons.add(ActionButton.create("المخازن", "find", "com.ca.ui.panels.StockQueryPanel"));
+            buttons.add(ActionButton.create("أمر شراء", "itementry", "com.ca.ui.panels.ItemEntryPanel"));
+            buttons.add(ActionButton.create("أمر توريد ", "itemtransfer", "com.ca.ui.panels.ItemTransferPanel"));
+            buttons.add(ActionButton.create("المرتجعات", "return", "com.ca.ui.panels.ItemReturnPanel"));
+            buttons.add(ActionButton.create("تقارير المرتجعات", "returnquerya", "com.ca.ui.panels.ReturnQueryPanel"));
+            buttons.add(ActionButton.create("التقارير", "stock", "com.ca.ui.report.LedgerReportPanel"));
             buttons.add(new JLabel());
-            buttons.add(LogOutButton.create("Logout", "logout", "com.ca.ui.panels.HomeScreenPanel"));
-            buttons.add(ExitButton.create("Exit", "exit", "com.ca.ui.panels.HomeScreenPanel"));
+            buttons.add(LogOutButton.create("الخروج", "logout", "com.ca.ui.panels.HomeScreenPanel"));
+            buttons.add(ExitButton.create("إغلاق", "exit", "com.ca.ui.panels.HomeScreenPanel"));
 
             toolBarPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED));
             toolBarPanel.setPreferredSize(new Dimension(getWidth(), 80));
