@@ -133,6 +133,7 @@
                                 <mainClass>com.ca.ui.Main</mainClass>
                             </manifest>
                         </archive>
+                    <finalName>InventoryAPP</finalName>
                 </configuration>
 
                 <executions>
